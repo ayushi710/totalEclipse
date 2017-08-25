@@ -1,15 +1,44 @@
+@keyframes cloud_move {
+    0% {left: -100px;}
+    100% {left: 100%;}
+}
 * {
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
 @keyframes moving_moon {
-    from {right:325px;}
-    to {right:502px;}
+    from {
+        right:355px;
+        background-color:#54adf6;
+    }
+    to {
+        right:502px;
+        background-color:#02192b;
+    }
+}
+@keyframes sun {
+    0% {
+        box-shadow: 0 0 40px gold, 0 0 100px #b9a018, inset 48px 8px 34px 25px #c4c4c4;
+        right: 600px;
+        background-color:rgb(207, 207, 212);
+        top: 250px;
+    }
+    75% {
+        background-color: #FFCC80;
+        box-shadow: 0 0 20px gold,0 0 30px #b9a018,inset 48px 8px 34px 25px #c4c4c4;
+    }
+    100% {
+        box-shadow:0 0 10px gold, 0 0 5px #b9a018, 0 0 5px #FBE9E7;
+        right: 500px;
+        background-color: #FF7043;
+        top: 200px;
+    }
 }
 @keyframes bg_color {
-    from {background-color:#90CAF9;}
-    to {background-color:#02192b;}
+    0% {background-color:#5fb2f6;}
+
+    100% {background-color:#02192b;}
 }
 body
 {
@@ -19,33 +48,90 @@ body
     animation-fill-mode: forwards;
     animation-duration:10s;
     animation-timing-function:linear;
-
+    z-index:-1;
 
 }
 .sun
 {
     background-color:rgb(207, 207, 212);
-    height:150px;
-    border-radius:50%;
-    width:150px;
+    height:100px;
+    border-radius:100%;
+    width:100px;
     position:absolute;
-    right: 500px;
-    top:200px;
-    box-shadow: 10px rgba(255,255,255,0.19);
-    box-shadow: 0 0 60px gold, 0 0 100px #b9a018, inset 0 5px 35px 53px #dbdbdb, inset 48px 8px 34px 25px #c4c4c4;
+    right: 700px;
+    top:250px;
+    z-index:1;
+    box-shadow: 0 0 40px gold, 0 0 100px #b9a018, inset 48px 8px 34px 25px #c4c4c4;
+    animation-name:sun;
+    animation-duration:10s;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
 }
 .moon
 {
-    background-color:#111;
-    width:145px;
-    height:145px;
-    border-radius:50%;
+    background-color: #096cbc;
+    width:96px;
+    height:96px;
+    border-radius:100%;
     position:absolute;
     right:325px;
     top:202px;
     animation-name: moving_moon;
     animation-duration:10s;
     animation-timing-function:linear;
-    animation-fill-mode: forwards;
-    box-shadow: inset 0 50px 40px 60px rgba(0,0,0,2), inset 70px 20px rgba(0,0,0,1.5);
+    animation-fill-mode:forwards;
+    z-index:2;
+}
+.cloud1,.cloud2
+{
+    background: url("http://www.scri8e.com/stars/PNG_Clouds/zc06.png?filename=./zc06.png&w0=800&h0s=289&imgType=3&h1=50&w1=140");
+    position: absolute;
+    left: -300px;
+    top: -70px;
+    height: 100%;
+    width: 300%;
+    animation: cloud_move 50s linear infinite ;
+
+    z-index: 1;
+}
+.cloud2
+{
+    background: url("http://freepngimages.com/wp-content/uploads/2016/02/clouds-transparent-background-2.png");
+    position: absolute;
+    animation: cloud_move 30s linear infinite;
+    z-index:10;
+    top: 100px;
+    transform: translate3d(0, 0, 0);
+}
+.ground
+{
+    background-color:#5b3005;
+    z-index:10;
+    width:100%;
+    height:50px;
+    position:fixed;
+    bottom:0;
+}
+.mount {
+    z-index:10;
+    background-color:#5b3005;
+    width:115px;
+    height:200px;
+    border-radius:95%;
+    position:fixed;
+    bottom:30px;
+    right:243px;
+    border: 0 50px solid #5b3005;
+}
+.side
+{
+    z-index:10;
+    position:fixed;
+    width:290px;
+    bottom:0;
+    right:155px;
+    border-left: 95px solid transparent;
+    border-right: 95px solid transparent;
+
+    border-bottom: 180px solid #5b3005 ;
 }
