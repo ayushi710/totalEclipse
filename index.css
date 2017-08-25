@@ -1,44 +1,85 @@
-@keyframes cloud_move {
-    0% {left: -100px;}
-    100% {left: 100%;}
-}
 * {
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
+@keyframes cloud_move {
+    0% {left: -100px;}
+    100% {left: 100%;}
+}
 @keyframes moving_moon {
-    from {
-        right:355px;
+    0%{
+        right:0%;
         background-color:#54adf6;
     }
-    to {
+    40% {
+        background-color: #54adf6;;
+    }
+    50%,55% {
         right:502px;
         background-color:#02192b;
     }
+    100%{
+        right:100%;
+        background-color:#54adf6;
+    }
+
 }
 @keyframes sun {
     0% {
         box-shadow: 0 0 40px gold, 0 0 100px #b9a018, inset 48px 8px 34px 25px #c4c4c4;
-        right: 600px;
+        right: 100%;
+        background-color:rgb(207, 207, 212);
+        top: 280px;
+    }
+    45%,57% {
+        background-color: #FFCC80;
+        box-shadow: 0 0 20px gold,0 0 30px #b9a018,inset 48px 18px 34px 25px #c4c4c4;
+    }
+    50%,55% {
+        box-shadow:0 0 10px gold, 0 0 5px #b9a018, 0 0 5px #FBE9E7;
+        right: 500px;
+        background-color: #FF8A65;
+        top: 200px;
+    }
+    100% {
+        box-shadow: 0 0 40px gold, 0 0 100px #b9a018, inset 48px 8px 34px 25px #c4c4c4;
+        right: 5%;
         background-color:rgb(207, 207, 212);
         top: 250px;
     }
-    75% {
-        background-color: #FFCC80;
-        box-shadow: 0 0 20px gold,0 0 30px #b9a018,inset 48px 8px 34px 25px #c4c4c4;
-    }
-    100% {
-        box-shadow:0 0 10px gold, 0 0 5px #b9a018, 0 0 5px #FBE9E7;
-        right: 500px;
-        background-color: #FF7043;
-        top: 200px;
-    }
 }
 @keyframes bg_color {
-    0% {background-color:#5fb2f6;}
+    0%,40%,100% {background-color:#5fb2f6;}
 
-    100% {background-color:#02192b;}
+    50%,55% {background-color:#02192b;}
+}
+@keyframes peak {
+    0%,40%,100% {
+        background-color: #64DD17;
+    }
+    50%,55% {
+        background-color: #004D40;
+    }
+
+}
+@keyframes side {
+    0%,40%,100% {
+        border-bottom: 180px solid #64DD17;
+    }
+    50%,55% {
+        border-bottom: 180px solid #004D40 ;
+    }
+
+}
+@keyframes stars {
+    0%,40%,67%,100% {
+        visibility: hidden;
+    }
+    41%,50%,55% {
+        visibility: visible;
+    }
+
 }
 body
 {
@@ -67,8 +108,7 @@ body
     animation-timing-function:linear;
     animation-fill-mode:forwards;
 }
-.moon
-{
+.moon {
     background-color: #096cbc;
     width:96px;
     height:96px;
@@ -82,29 +122,26 @@ body
     animation-fill-mode:forwards;
     z-index:2;
 }
-.cloud1,.cloud2
-{
+.cloud1,.cloud2 {
     background: url("http://www.scri8e.com/stars/PNG_Clouds/zc06.png?filename=./zc06.png&w0=800&h0s=289&imgType=3&h1=50&w1=140");
     position: absolute;
     left: -300px;
     top: -70px;
     height: 100%;
     width: 300%;
-    animation: cloud_move 50s linear infinite ;
+    animation: cloud_move 50s linear ;
 
     z-index: 1;
 }
-.cloud2
-{
+.cloud2 {
     background: url("http://freepngimages.com/wp-content/uploads/2016/02/clouds-transparent-background-2.png");
     position: absolute;
-    animation: cloud_move 30s linear infinite;
+    animation: cloud_move 30s linear;
     z-index:10;
     top: 100px;
     transform: translate3d(0, 0, 0);
 }
-.ground
-{
+.ground {
     background-color:#5b3005;
     z-index:10;
     width:100%;
@@ -112,26 +149,67 @@ body
     position:fixed;
     bottom:0;
 }
-.mount {
-    z-index:10;
-    background-color:#5b3005;
-    width:115px;
-    height:200px;
-    border-radius:95%;
-    position:fixed;
-    bottom:30px;
-    right:243px;
-    border: 0 50px solid #5b3005;
+.mount1 {
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
-.side
-{
+.mount2 {
+    position: fixed;
+    bottom: -40px;
+    right: 255px;
+}
+.mount3 {
+    position: fixed;
+    bottom: -50px;
+    right: -200px;
+
+}
+.mount4 {
+    position: fixed;
+    bottom: -30px;
+    right: 500px;
+}
+.mount5 {
+    position: fixed;
+    bottom: 0px;
+    right: 900px;
+}
+.mount6 {
+    position: fixed;
+    bottom: -90px;
+    right: 700px;
+}
+.peak {
     z-index:10;
-    position:fixed;
+    background-color:#64DD17;
+    width:115px;
+    height:159px;
+    border-radius:95%;
+    position: absolute;
+    bottom: 61px;
+    right:243px;
+    animation: peak 10s linear;
+    animation-fill-mode: forwards;
+}
+.side {
+    z-index:10;
+    position: absolute;
     width:290px;
     bottom:0;
     right:155px;
     border-left: 95px solid transparent;
     border-right: 95px solid transparent;
-
-    border-bottom: 180px solid #5b3005 ;
+    border-bottom: 180px solid #64DD17;
+    animation: side 10s linear;
+    animation-fill-mode: forwards;
+}
+.stars {
+    visibility: visible;
+    border: 0.6px solid #fff;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    animation: stars 10s linear;
+    animation-fill-mode: forwards;
 }
