@@ -25,7 +25,7 @@
     }
     57% {
         background-color: #54adf6;
-        right: 615px;
+        right: 625px;
     }
     100%{
         right:100%;
@@ -38,10 +38,11 @@
         box-shadow: 0 0 40px gold, 0 0 100px #b9a018, inset 48px 8px 34px 25px #c4c4c4;
         right: 100%;
         background-color:rgb(207, 207, 212);
-        top: 150px;
+        top: 300px;
     }
     30% {
         right: 700px;
+        top: 150px;
     }
     47% {
         background-color: #FFCC80;
@@ -57,13 +58,13 @@
     57% {
         background-color: #FFCC80;
         box-shadow: 0 0 20px gold,0 0 30px #b9a018,inset 48px 18px 34px 25px #c4c4c4;
-        right: 590px;
+        right: 575px;
     }
     100% {
         box-shadow: 0 0 40px gold, 0 0 100px #b9a018, inset 48px 8px 34px 25px #c4c4c4;
         right: 0%;
         background-color:rgb(207, 207, 212);
-        top: 210px;
+        top: 310px;
     }
 }
 @keyframes bg_color {
@@ -116,7 +117,7 @@ body
     position:absolute;
     right: 700px;
     top:150px;
-    z-index:1;
+    z-index:0;
     box-shadow: 0 0 40px gold, 0 0 100px #b9a018, inset 48px 8px 34px 25px #c4c4c4;
     animation-name:sun;
     animation-duration:20s;
@@ -194,7 +195,8 @@ body
 }
 .mount1 {
     position: relative;
-    bottom: -22px;
+    bottom: -58px;
+    left: -29px;
     opacity: 0.7;
     box-shadow: 500px 0 0 0 #fff;
 }
@@ -205,7 +207,7 @@ body
 }
 .mount3 {
     position: relative;
-    bottom: -60px;
+    bottom: -25px;
     right: -200px;
 
 }
@@ -216,12 +218,12 @@ body
 }
 .mount5 {
     position: relative;
-    bottom: -55px;
-    right: -910px;
+    bottom: -53px;
+    right: -944px;
 }
 .mount6 {
     position: relative;
-    bottom: -10px;
+    bottom: -50px;
     right: -720px;
     opacity: 0.5;
 }
@@ -234,7 +236,7 @@ body
     border-bottom:100px solid #adbec6;
     top :100px;
     left:150px;
-    z-index:2;
+    z-index:5;
     animation:peak 20s linear;
     animation-fill-mode:forwards;
     animation-iteration-count: infinite;
