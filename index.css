@@ -12,7 +12,7 @@
         right:0%;
         background-color:#54adf6;
     }
-    40% {
+    45% {
         background-color: #54adf6;;
     }
     50%,55% {
@@ -50,20 +50,20 @@
     }
 }
 @keyframes bg_color {
-    0%,45%,100% {background-color:#5fb2f6;}
+    0%,47%,100% {background-color:#5fb2f6;}
 
     50%,55% {background-color:#02192b;}
 }
 @keyframes base {
-    0%,40%,100% {border-bottom:250px solid #455963;}
+    0%,45%,100% {border-bottom:250px solid #455963;}
     50%,55% {border-bottom:250px solid #0e1315;}
 }
 @keyframes peak {
-    0%,40%,100% {border-bottom:100px solid #adbec6;}
+    0%,45%,100% {border-bottom:100px solid #adbec6;}
     50%,55% {border-bottom:100px solid #455963;}
 }
 @keyframes caps {
-    0%,40%,100% {border-top: 20px solid #adbec6;}
+    0%,45%,100% {border-top: 20px solid #adbec6;}
     50%,55% {border-top: 20px solid #455963;}
 }
 @keyframes stars {
@@ -233,8 +233,8 @@ body
     visibility: visible;
     border: 1px solid #fff;
     position: absolute;
-    top: 350px;
-    right: 500px;
+    top: 250px;
+    right: 600px;
     box-shadow: 135px 135px 0 0 #fff,-140px -25px 0 0 #fff,35px 335px 0 0 #fff,-35px 15px 0 0 #fff,
     235px 35px 0 0 #fff,-15px -135px 0 0 #fff,-335px 135px 0 0 #fff,-310px -15px 0 0 #fff,-435px -100px 0 0 #fff,
     -35px 90px 0 0 #fff,-505px 5px 0 0 #fff,-5px 80px 0 0 #fff,-97px 358px 0 0 #fff;
