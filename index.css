@@ -12,12 +12,20 @@
         right:0%;
         background-color:#54adf6;
     }
-    47%,65% {
-        background-color: #54adf6;;
+    30% {
+        right: 500px;
+    }
+    47%{
+        background-color: #54adf6;
+        right: 590px;
     }
     50%,55% {
-        right:603px;
+        right:601px;
         background-color:#02192b;
+    }
+    57% {
+        background-color: #54adf6;
+        right: 615px;
     }
     100%{
         right:100%;
@@ -32,15 +40,24 @@
         background-color:rgb(207, 207, 212);
         top: 150px;
     }
-    45%,57% {
+    30% {
+        right: 700px;
+    }
+    47% {
         background-color: #FFCC80;
         box-shadow: 0 0 20px gold,0 0 30px #b9a018,inset 48px 18px 34px 25px #c4c4c4;
+        right: 610px;
     }
     50%,55% {
         box-shadow:0 0 10px gold, 0 0 5px #b9a018, 0 0 5px #FBE9E7;
         right: 600px;
         background-color: #FF8A65;
-        top: 100px;
+        top: 101px;
+    }
+    57% {
+        background-color: #FFCC80;
+        box-shadow: 0 0 20px gold,0 0 30px #b9a018,inset 48px 18px 34px 25px #c4c4c4;
+        right: 590px;
     }
     100% {
         box-shadow: 0 0 40px gold, 0 0 100px #b9a018, inset 48px 8px 34px 25px #c4c4c4;
@@ -66,7 +83,7 @@
     0%,45%,70%,100% {border-top: 20px solid #adbec6;}
     50%,55% {border-top: 20px solid #455963;}
 }
-@keyframes stars {
+@keyframes sky {
     0%,45%,67%,100% {
         visibility: hidden;
         opacity: 0;
@@ -109,8 +126,8 @@ body
 }
 .moon {
     background-color: #096cbc;
-    width:64px;
-    height:64px;
+    width:68px;
+    height:68px;
     border-radius:100%;
     position:absolute;
     right:325px;
@@ -217,7 +234,7 @@ body
     border-bottom:100px solid #adbec6;
     top :100px;
     left:150px;
-    z-index:1;
+    z-index:2;
     animation:peak 20s linear;
     animation-fill-mode:forwards;
     animation-iteration-count: infinite;
@@ -236,12 +253,12 @@ body
 }
 .cap-1,.cap-2,.cap-3 {
     position:absolute;
-    top:200px;
+    top:199px;
     left: 150px;
     border-top: 20px solid #adbec6;
     border-left: 35px solid transparent;
     border-right: 35px solid transparent;
-    z-index:1;
+    z-index:2;
     animation: caps 20s linear;
     animation-fill-mode:forwards;
     animation-iteration-count: infinite;
@@ -249,12 +266,12 @@ body
 
 .cap-2 {
 
-    top:200px;
+    top:199px;
     left: 215px;
 }
 .cap-3 {
 
-    top:200px;
+    top:199px;
     left: 280px;
 
 }
@@ -263,12 +280,15 @@ body
     border: 1px solid #fff;
     position: absolute;
     top: 200px;
-    right: 600px;
+    right: 650px;
     opacity: 0;
-    box-shadow: 135px 135px 0 0 #fff,-140px -25px 0 0 #fff,35px 335px 0 0 #fff,-35px 15px 0 0 #fff,
-    235px 35px 0 0 #fff,-15px -135px 0 0 #fff,-335px 135px 0 0 #fff,-310px -15px 0 0 #fff,-435px -100px 0 0 #fff,
-    -35px 90px 0 0 #fff,-505px 5px 0 0 #fff,-5px 80px 0 0 #fff,-97px 358px 0 0 #fff,-500px -20px 0 0 #fff;
-    animation: stars 20s linear;
+    z-index: -1;
+    box-shadow: 135px 35px 0 0 #fff,-140px -25px 0 0 #fff,35px 135px 0 0 #fff,-35px 15px 0 0 #fff,
+    235px 35px 0 0 #fff,-15px -135px 0 0 #fff,-335px 75px 0 0 #fff,-310px -15px 0 0 #fff,-435px -100px 0 0 #fff,
+    -35px 90px 0 0 #fff,-505px 5px 0 0 #fff,-5px 80px 0 0 #fff,-97px 158px 0 0 #fff,-500px -20px 0 0 #fff,
+    400px 20px 0 0 #fff, 425px -40px 0 0 #fff, 500px -70px 0 0 #fff, 550px -20px 0 0 #fff,-550px -150px 0 0 #fff,
+    -600px 30px 0 0 #fff , 345px 55px 0 0 #fff,250px -40px 0 0 #fff,-600px -40px 0 0 #fff;
+    animation: sky 20s linear;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
 }
@@ -295,5 +315,15 @@ body
     border-radius: 50%;
     border: 3px solid #f1f1f1;
     animation: bg_color 20s linear infinite;
+    animation-fill-mode: forwards;
+}
+.planets {
+    border: 2px solid #ffffff;
+    position: absolute;
+    top:30px;
+    right: 30px;
+    opacity: 0;
+    box-shadow: -150px 50px 0 0 #fff, -900px 50px 0 0 #fff, -670px 80px 0 0 #fff, -1100px 80px 0 0 #fff;
+    animation: sky 20s linear infinite;
     animation-fill-mode: forwards;
 }
