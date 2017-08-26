@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 @keyframes cloud_move {
-    0% {left: -100px;}
+    0% {left: -150px;}
     100% {left: 100%;}
 }
 @keyframes moving_moon {
@@ -12,11 +12,11 @@
         right:0%;
         background-color:#54adf6;
     }
-    45% {
+    47%,65% {
         background-color: #54adf6;;
     }
     50%,55% {
-        right:502px;
+        right:603px;
         background-color:#02192b;
     }
     100%{
@@ -30,7 +30,7 @@
         box-shadow: 0 0 40px gold, 0 0 100px #b9a018, inset 48px 8px 34px 25px #c4c4c4;
         right: 100%;
         background-color:rgb(207, 207, 212);
-        top: 280px;
+        top: 150px;
     }
     45%,57% {
         background-color: #FFCC80;
@@ -38,114 +38,139 @@
     }
     50%,55% {
         box-shadow:0 0 10px gold, 0 0 5px #b9a018, 0 0 5px #FBE9E7;
-        right: 500px;
+        right: 600px;
         background-color: #FF8A65;
-        top: 200px;
+        top: 100px;
     }
     100% {
         box-shadow: 0 0 40px gold, 0 0 100px #b9a018, inset 48px 8px 34px 25px #c4c4c4;
-        right: 5%;
+        right: 0%;
         background-color:rgb(207, 207, 212);
-        top: 250px;
+        top: 210px;
     }
 }
 @keyframes bg_color {
-    0%,47%,100% {background-color:#5fb2f6;}
+    0%,47%,65%,100% {background-color:#5fb2f6;}
 
     50%,55% {background-color:#02192b;}
 }
 @keyframes base {
-    0%,45%,100% {border-bottom:250px solid #455963;}
+    0%,45%,70%,100% {border-bottom:250px solid #455963;}
     50%,55% {border-bottom:250px solid #0e1315;}
 }
 @keyframes peak {
-    0%,45%,100% {border-bottom:100px solid #adbec6;}
+    0%,45%,70%,100% {border-bottom:100px solid #adbec6;}
     50%,55% {border-bottom:100px solid #455963;}
 }
 @keyframes caps {
-    0%,45%,100% {border-top: 20px solid #adbec6;}
+    0%,45%,70%,100% {border-top: 20px solid #adbec6;}
     50%,55% {border-top: 20px solid #455963;}
 }
 @keyframes stars {
     0%,45%,67%,100% {
         visibility: hidden;
+        opacity: 0;
     }
     50%,55% {
         visibility: visible;
+        opacity: 1;
     }
+
+}
+@keyframes ground {
+    0%,45%,65%,100% {  background-color: #87D37C;  }
+    50%,55% {background-color: #26A65B;}
 
 }
 body
 {
     background-color:#90CAF9;
     position:relative;
-    animation-name: bg_color;
-    animation-fill-mode: forwards;
-    animation-duration:20s;
-    animation-timing-function:linear;
     z-index:-1;
-
+    animation: bg_color 20s linear infinite;
+    animation-fill-mode: forwards;
 }
 .sun
 {
     background-color:rgb(207, 207, 212);
-    height:100px;
+    height:70px;
     border-radius:100%;
-    width:100px;
+    width:70px;
     position:absolute;
     right: 700px;
-    top:250px;
+    top:150px;
     z-index:1;
     box-shadow: 0 0 40px gold, 0 0 100px #b9a018, inset 48px 8px 34px 25px #c4c4c4;
     animation-name:sun;
     animation-duration:20s;
     animation-timing-function:linear;
     animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
 }
 .moon {
     background-color: #096cbc;
-    width:96px;
-    height:96px;
+    width:64px;
+    height:64px;
     border-radius:100%;
     position:absolute;
     right:325px;
-    top:202px;
+    top:102px;
     animation-name: moving_moon;
     animation-duration:20s;
     animation-timing-function:linear;
     animation-fill-mode:forwards;
     z-index:2;
+    animation-iteration-count: infinite;
 }
-.cloud1,.cloud2 {
-    background: url("http://www.scri8e.com/stars/PNG_Clouds/zc06.png?filename=./zc06.png&w0=800&h0s=289&imgType=3&h1=50&w1=140");
-    position: absolute;
-    left: -300px;
-    top: -70px;
-    height: 100%;
-    width: 300%;
-    animation: cloud_move 50s linear ;
+.cloud1 {
+    position:relative;
+    left: -30px;
+    top:50px;
+    animation: cloud_move 50s linear infinite;
 
-    z-index: 1;
 }
 .cloud2 {
-    background: url("http://freepngimages.com/wp-content/uploads/2016/02/clouds-transparent-background-2.png");
-    position: absolute;
-    animation: cloud_move 30s linear;
-    z-index:10;
-    top: 100px;
-    transform: translate3d(0, 0, 0);
+    position: relative;
+    top : 130px;
+    animation: cloud_move 25s linear infinite;
 }
-.ground {
-    background-color:#5b3005;
-    z-index:10;
-    width:100%;
-    height:50px;
-    position:fixed;
-    bottom:0;
+.cloud3 {
+    position: relative;
+    top : 210px;
+    left: -100px;
+    animation: cloud_move 75s linear infinite;
+}
+.curve_one {
+    position:absolute;
+    top:16px;
+    width:80px;
+    height:15px;
+    background-color:#C5EFF7;
+    border-radius:35%;
+    z-index: 4;
+}
+.curve_two {
+    position:absolute;
+    top:7px;
+    left:10px;
+    width:60px;
+    height:15px;
+    background-color:#C5EFF7;
+    border-radius:35%;
+    z-index: 4;
+}
+.curve_three {
+    position:absolute;
+    left:23px;
+    width:30px;
+    height:15px;
+    background-color:#C5EFF7;
+    border-radius:35%;
+    z-index: 4;
 }
 .mountains {
     position: fixed;
-    top: 300px;
+    top: 150px;
     left: 0;
     right: 0;
     width: 100%;
@@ -154,6 +179,7 @@ body
     position: relative;
     bottom: -22px;
     opacity: 0.7;
+    box-shadow: 500px 0 0 0 #fff;
 }
 .mount2 {
     position: relative;
@@ -162,7 +188,7 @@ body
 }
 .mount3 {
     position: relative;
-    bottom: -50px;
+    bottom: -60px;
     right: -200px;
 
 }
@@ -173,8 +199,8 @@ body
 }
 .mount5 {
     position: relative;
-    bottom: -50px;
-    right: -850px;
+    bottom: -55px;
+    right: -910px;
 }
 .mount6 {
     position: relative;
@@ -194,6 +220,7 @@ body
     z-index:1;
     animation:peak 20s linear;
     animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
 }
 .base {
     position: absolute;
@@ -205,7 +232,7 @@ body
     border-bottom:250px solid #455963;
     animation:base 20s linear;
     animation-fill-mode:forwards;
-
+    animation-iteration-count: infinite;
 }
 .cap-1,.cap-2,.cap-3 {
     position:absolute;
@@ -217,7 +244,9 @@ body
     z-index:1;
     animation: caps 20s linear;
     animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
 }
+
 .cap-2 {
 
     top:200px;
@@ -233,20 +262,38 @@ body
     visibility: visible;
     border: 1px solid #fff;
     position: absolute;
-    top: 250px;
+    top: 200px;
     right: 600px;
+    opacity: 0;
     box-shadow: 135px 135px 0 0 #fff,-140px -25px 0 0 #fff,35px 335px 0 0 #fff,-35px 15px 0 0 #fff,
     235px 35px 0 0 #fff,-15px -135px 0 0 #fff,-335px 135px 0 0 #fff,-310px -15px 0 0 #fff,-435px -100px 0 0 #fff,
-    -35px 90px 0 0 #fff,-505px 5px 0 0 #fff,-5px 80px 0 0 #fff,-97px 358px 0 0 #fff;
+    -35px 90px 0 0 #fff,-505px 5px 0 0 #fff,-5px 80px 0 0 #fff,-97px 358px 0 0 #fff,-500px -20px 0 0 #fff;
     animation: stars 20s linear;
     animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
 }
 .ground {
-    background-color: #D4E157;
-    width: 100%;
-    height: 70px;
+    background-color: #87D37C;
+    width: 3000px;
+    height: 250px;
     border-radius: 80%;
     position: fixed;
-    bottom: -35px;
+    bottom: -70px;
+    right: -854px;
+    animation: ground 20s linear infinite;
+    animation-fill-mode: forwards;
 
+}
+.pond {
+    z-index: 2;
+    position: fixed;
+    bottom: 60px;
+    left: 100px;
+    background-color: #5fb2f6;
+    width: 450px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #f1f1f1;
+    animation: bg_color 20s linear infinite;
+    animation-fill-mode: forwards;
 }
