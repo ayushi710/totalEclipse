@@ -103,8 +103,8 @@
 
 }
 @keyframes ground {
-    0%,45%,65%,100% {  background-color: #87D37C;  }
-    50%,55% {background-color: #26A65B;}
+    0%,45%,65%,100% {  background-color: #26C281;  }
+    50%,55% {background-color: #16A085;}
 
 }
 @keyframes color_change {
@@ -477,7 +477,7 @@ body
     position:absolute;
     border-left:30px solid transparent;
     border-right:30px solid transparent;
-    border-bottom:100px solid green;
+    border-bottom:100px solid #1E824C;
 
 }
 .stem {
@@ -486,5 +486,6 @@ body
     left:25px;
     width:10px;
     height:60px;
+    border-top:7px solid #49110d;
     background-color: #96281B;
 }
