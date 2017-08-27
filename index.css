@@ -143,12 +143,21 @@
     }
 
 }
+@keyframes pond_color {
+    0%,45%,60%,100% {
+        background : repeating-linear-gradient(#399ff3,#78bdf6 20%,#bbdefb 20%);
+    }
+    50%,55% {
+        background : repeating-linear-gradient(#02192b,#033052 20%,#075ea0 20%);
+    }
+
+}
 body
 {
     background-color:#90CAF9;
     position:relative;
     z-index:-1;
-    animation: bg_color 20s linear infinite;
+    animation: pond_color 20s linear infinite;
     animation-fill-mode: forwards;
 }
 .sun
@@ -237,7 +246,7 @@ body
 }
 
 .mountains {
-    position: fixed;
+    position: relative;
     top: 150px;
     left: 0;
     right: 0;
@@ -359,11 +368,11 @@ body
 .ground {
     background-color: #87D37C;
     width: 3000px;
-    height: 250px;
+    height: 300px;
     border-radius: 80%;
-    position: fixed;
-    bottom: -70px;
-    right: -854px;
+    position: relative;
+    bottom: -522px;
+    left: -854px;
     animation: ground 20s linear infinite;
     animation-fill-mode: forwards;
 
@@ -374,11 +383,12 @@ body
     bottom: 17px;
     left: -192px;
     background-color: #5fb2f6;
+    background : repeating-linear-gradient(#399ff3,#78bdf6 10%,#bbdefb 10%);
     width: 650px;
     height: 140px;
     border-radius: 50%;
     border: 3px solid #f1f1f1;
-    animation: bg_color 20s linear infinite;
+    animation: pond_color 20s linear infinite;
     animation-fill-mode: forwards;
 }
 .planets {
@@ -401,24 +411,23 @@ body
 }
 .wave {
     position: absolute;
-    background-color: #C5EFF7;
+    background-color: #FDE3A7;
     border-radius: 50%;
     height: 3px;
     z-index: 2;
-    animation: color_change 20s linear infinite;
-    animation-fill-mode: forwards;
 }
 .home {
     position:fixed;
-
     bottom: 310px;
     right: 425px;
+
 }
 .roof {
     position:absolute;
     border-bottom:100px solid #D35400;
     border-left:130px solid transparent;
     border-right:130px solid transparent;
+
     /**  border-image: repeating-linear-gradient(to bottom,#6b1c13,#96281B 20%,#c63424 10%,#e16c5f 5%);**/
 }
 .front {
@@ -488,7 +497,40 @@ body
     top:100px;
     left:25px;
     width:10px;
-    height:60px;
+    height:50px;
     border-top:7px solid #49110d;
     background-color: #96281B;
+}
+.fish {
+    position: relative;
+    top: 35px;
+    left: 125px;
+}
+.fish-body {
+    position:absolute;
+    left:30px;
+    background-color: #D35400;
+    border-radius:50%;
+    width:11%;
+    height:30px;
+}
+.wing {
+    position:absolute;
+    left:18px;
+    background-color: #F89406;
+    border-radius:45%;
+    width:4.5%;
+    height:15px;
+    transform:rotate(30deg);
+}
+.eye {
+    position:absolute;
+    top:7px;
+    left:55px;
+    z-index:2;
+    border-radius:100%;
+    width:6px;
+    height:6px;
+    border:1px solid white;
+    background:black;
 }
