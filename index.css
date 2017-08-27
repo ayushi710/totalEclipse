@@ -77,12 +77,12 @@
     50%,55% {border-bottom:250px solid #0e1315;}
 }
 @keyframes peak {
-    0%,45%,70%,100% {border-bottom:100px solid #adbec6;}
-    50%,55% {border-bottom:100px solid #455963;}
+    0%,45%,70%,100% {border-bottom:60px solid #adbec6;}
+    50%,55% {border-bottom:60px solid #455963;}
 }
 @keyframes caps {
-    0%,45%,70%,100% {border-top: 20px solid #adbec6;}
-    50%,55% {border-top: 20px solid #455963;}
+    0%,45%,70%,100% {border-top: 15px solid #adbec6;}
+    50%,55% {border-top: 15px solid #455963;}
 }
 @keyframes sky {
     0%,45%,67%,100% {
@@ -99,6 +99,25 @@
     0%,45%,65%,100% {  background-color: #87D37C;  }
     50%,55% {background-color: #26A65B;}
 
+}
+@keyframes color_change {
+    0%,45%,67%,100% {
+        background-color: #C5EFF7;
+    }
+    50%,55% {
+        background-color: #465b70 ;
+    }
+}
+@keyframes moving_waves {
+    0% {
+        left: -90px;
+    }
+    50%,55% {
+        left: -10px;
+    }
+    100% {
+        left: 120px;
+    }
 }
 body
 {
@@ -166,6 +185,8 @@ body
     background-color:#C5EFF7;
     border-radius:45%;
     z-index: 4;
+    animation: color_change 20s linear infinite;
+    animation-fill-mode: forwards;
 }
 .curve_two {
     position:absolute;
@@ -176,6 +197,8 @@ body
     background-color:#C5EFF7;
     border-radius:50%;
     z-index: 4;
+    animation: color_change 20s linear infinite;
+    animation-fill-mode: forwards;
 }
 .curve_three {
     position:absolute;
@@ -185,7 +208,10 @@ body
     background-color:#C5EFF7;
     border-radius:50%;
     z-index: 4;
+    animation: color_change 20s linear infinite;
+    animation-fill-mode: forwards;
 }
+
 .mountains {
     position: fixed;
     top: 150px;
@@ -231,11 +257,11 @@ body
 .peak {
     position:absolute;
     width:0;
-    border-left:100px solid transparent;
-    border-right:100px solid transparent;
+    border-left:60px solid transparent;
+    border-right:60px solid transparent;
     border-bottom:100px solid #adbec6;
     top :100px;
-    left:150px;
+    left:190px;
     z-index:5;
     animation:peak 20s linear;
     animation-fill-mode:forwards;
@@ -255,11 +281,11 @@ body
 }
 .cap-1,.cap-2,.cap-3 {
     position:absolute;
-    top:199px;
-    left: 150px;
-    border-top: 20px solid #adbec6;
-    border-left: 35px solid transparent;
-    border-right: 35px solid transparent;
+    top:159px;
+    left: 190px;
+    border-top: 15px solid #adbec6;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
     z-index:2;
     animation: caps 20s linear;
     animation-fill-mode:forwards;
@@ -268,13 +294,13 @@ body
 
 .cap-2 {
 
-    top:199px;
-    left: 215px;
+    top:159px;
+    left: 230px;
 }
 .cap-3 {
 
-    top:199px;
-    left: 280px;
+    top:159px;
+    left: 270px;
 
 }
 .stars {
@@ -333,5 +359,17 @@ body
 }
 .moving_water {
     position: relative;
+    top:6px;
+    animation: moving_waves 20s linear infinite;
+    animation-fill-mode: forwards;
 
+}
+.wave {
+    position: absolute;
+    background-color: #C5EFF7;
+    border-radius: 50%;
+    height: 3px;
+    z-index: 2;
+    animation: color_change 20s linear infinite;
+    animation-fill-mode: forwards;
 }
