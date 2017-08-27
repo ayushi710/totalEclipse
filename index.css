@@ -134,12 +134,19 @@
     }
 }
 @keyframes window {
-    0%,47%,57%,100% {
+    0%,35%,70%,100% {
         background-color: #C5EFF7;
+
+        box-shadow: none;
+    }
+
+    47%,57% {
+        background-color: #C5EFF7;
+
     }
     50%,55% {
         background-color: #F4D03F ;
-        box-shadow: 0 0 55px 0 #F9BF3B;
+        box-shadow: 0 0 55px 0 #F9BF3B,0 120px 55px 0 #F9BF3B;
     }
 
 }
@@ -467,6 +474,7 @@ body
     background-color:#C5EFF7;
     animation: window 20s linear infinite;
     animation-fill-mode: forwards;
+
 
 }
 .glass-1 {
