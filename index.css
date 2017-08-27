@@ -144,7 +144,24 @@
 
 }
 
+@keyframes fish {
+    0%,20%,63% {
+        right: -140px;
+        opacity: 1;
+    }
 
+    35%,75%,90% {
+        opacity: 1;
+    }
+    40%,100% {
+        right: -610px;
+        opacity: 0;
+    }
+    50%,59% {
+        opacity:0;
+        right:-140px;
+    }
+}
 body
 {
     background-color:#90CAF9;
@@ -499,7 +516,9 @@ body
     height:90px;
     position:relative;
     right:-250px;
-    top:20px;
+    top:60px;
+    animation: fish 20s linear infinite;
+    animation-fill-mode: forwards;
 }
 .fish-body {
     position:absolute;
@@ -527,4 +546,13 @@ body
     height:6px;
     border:1px solid white;
     background:black;
+}
+.mouth {
+    position:absolute;
+    z-index:3;
+    border :1px solid red;
+    border-radius:100%;
+    top:8px;
+    left:-16px;
+    width:5px;
 }
