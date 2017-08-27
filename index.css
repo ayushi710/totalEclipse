@@ -109,13 +109,22 @@
     }
 }
 @keyframes moving_waves {
-    0% {
-        left: -90px;
+    0%,10% {
+        opacity: 0;
+        left: -50px;
+    }
+    25% {
+        opacity: 1;
     }
     50%,55% {
+        opacity: 0;
         left: -10px;
     }
-    100% {
+    57% {
+        opacity: 1;
+    }
+    100%,90% {
+        opacity: 0;
         left: 120px;
     }
 }
