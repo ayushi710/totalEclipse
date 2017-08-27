@@ -139,6 +139,7 @@
     }
     50%,55% {
         background-color: #F4D03F ;
+        box-shadow: 0 0 55px 0 #F9BF3B;
     }
 
 }
@@ -427,6 +428,7 @@ body
     width:230px;
     height:140px;
     background:#F5AB35;
+    border-top:7px solid #49110d;
     background: repeating-linear-gradient(to right,#6b1c13,#96281B 10%,#c63424 7%,#e16c5f 2%);
 
 }
@@ -446,6 +448,7 @@ body
     background-color:#C5EFF7;
     animation: window 20s linear infinite;
     animation-fill-mode: forwards;
+
 }
 .glass-1 {
 
