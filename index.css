@@ -50,7 +50,7 @@
         right: 610px;
     }
     50%,55% {
-        box-shadow:0 0 10px gold, 0 0 5px #b9a018, 0 0 5px #FBE9E7;
+        box-shadow:0 0 5px gold, 0 0 2px #b9a018, 0 0 1px #FBE9E7;
         right: 600px;
         background-color: #FF8A65;
         top: 101px;
@@ -164,7 +164,7 @@ body
     width:80px;
     height:15px;
     background-color:#C5EFF7;
-    border-radius:35%;
+    border-radius:45%;
     z-index: 4;
 }
 .curve_two {
@@ -174,7 +174,7 @@ body
     width:60px;
     height:15px;
     background-color:#C5EFF7;
-    border-radius:35%;
+    border-radius:50%;
     z-index: 4;
 }
 .curve_three {
@@ -183,7 +183,7 @@ body
     width:30px;
     height:15px;
     background-color:#C5EFF7;
-    border-radius:35%;
+    border-radius:50%;
     z-index: 4;
 }
 .mountains {
@@ -285,6 +285,7 @@ body
     right: 650px;
     opacity: 0;
     z-index: -1;
+    border-radius: 100%;
     box-shadow: 135px 35px 0 0 #fff,-140px -25px 0 0 #fff,35px 135px 0 0 #fff,-35px 15px 0 0 #fff,
     235px 35px 0 0 #fff,-15px -135px 0 0 #fff,-335px 75px 0 0 #fff,-310px -15px 0 0 #fff,-435px -100px 0 0 #fff,
     -35px 90px 0 0 #fff,-505px 5px 0 0 #fff,-5px 80px 0 0 #fff,-97px 158px 0 0 #fff,-500px -20px 0 0 #fff,
@@ -325,7 +326,12 @@ body
     top:30px;
     right: 30px;
     opacity: 0;
-    box-shadow: -150px 50px 0 0 #fff, -900px 50px 0 0 #fff, -670px 80px 0 0 #fff, -1100px 80px 0 0 #fff;
+    border-radius: 100%;
+    box-shadow: -150px 50px 0 2px #fff, -900px 50px 0 2px #fff, -670px 80px 0 1px #fff, -1100px 80px 0 1px #fff;
     animation: sky 20s linear infinite;
     animation-fill-mode: forwards;
+}
+.moving_water {
+    position: relative;
+
 }
