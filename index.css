@@ -68,9 +68,16 @@
     }
 }
 @keyframes bg_color {
-    0%,47%,65%,100% {background-color:#5fb2f6;}
+    0%,4%,96%,100%{
+        background-color:#6BB9F0 ;
+    }
+    20%,47%,65% {
+        background-color:#5fb2f6;
+    }
 
-    50%,55% {background-color:#02192b;}
+    50%,55% {
+        background-color:#02192b;
+    }
 }
 @keyframes base {
     0%,45%,70%,100% {border-bottom:250px solid #455963;}
@@ -85,7 +92,7 @@
     50%,55% {border-top: 15px solid #455963;}
 }
 @keyframes sky {
-    0%,45%,67%,100% {
+    0%,42%,67%,100% {
         visibility: hidden;
         opacity: 0;
     }
@@ -323,18 +330,18 @@ body
 }
 .stars {
     visibility: visible;
-    border: 1px solid #fff;
+    border: 1px solid #F4D03F;
     position: absolute;
     top: 200px;
     right: 650px;
     opacity: 0;
     z-index: -1;
     border-radius: 100%;
-    box-shadow: 135px 35px 0 0 #fff,-140px -25px 0 0 #fff,35px 135px 0 0 #fff,-35px 15px 0 0 #fff,
-    235px 35px 0 0 #fff,-15px -135px 0 0 #fff,-335px 75px 0 0 #fff,-310px -15px 0 0 #fff,-435px -100px 0 0 #fff,
-    -35px 90px 0 0 #fff,-505px 5px 0 0 #fff,-5px 80px 0 0 #fff,-97px 158px 0 0 #fff,-500px -20px 0 0 #fff,
-    400px 20px 0 0 #fff, 425px -40px 0 0 #fff, 500px -70px 0 0 #fff, 550px -20px 0 0 #fff,-550px -150px 0 0 #fff,
-    -600px 30px 0 0 #fff , 345px 55px 0 0 #fff,250px -40px 0 0 #fff,-600px -40px 0 0 #fff;
+    box-shadow: 135px 35px 0 0 #F4D03F,-140px -25px 0 0 #F4D03F,35px 135px 0 0 #F4D03F,-35px 15px 0 0 #F4D03F,
+    235px 35px 0 0 #F4D03F,-15px -135px 0 0 #F4D03F,-335px 75px 0 0 #F4D03F,-310px -15px 0 0 #F4D03F,-435px -100px 0 0 #F4D03F,
+    -35px 90px 0 0 #F4D03F,-505px 5px 0 0 #F4D03F,-5px 80px 0 0 #F4D03F,-97px 158px 0 0 #F4D03F,-500px -20px 0 0 #F4D03F,
+    400px 20px 0 0 #F4D03F, 425px -40px 0 0 #F4D03F, 500px -70px 0 0 #F4D03F, 550px -20px 0 0 #F4D03F,-550px -150px 0 0 #F4D03F,
+    -600px 30px 0 0 #F4D03F, 345px 55px 0 0 #F4D03F,250px -40px 0 0 #F4D03F,-600px -40px 0 0 #F4D03F;
     animation: sky 20s linear;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
@@ -365,13 +372,13 @@ body
     animation-fill-mode: forwards;
 }
 .planets {
-    border: 2px solid #ffffff;
+    border: 2px solid #F4D03F;
     position: absolute;
     top:30px;
     right: 30px;
     opacity: 0;
     border-radius: 100%;
-    box-shadow: -150px 50px 0 2px #fff, -900px 50px 0 2px #fff, -670px 80px 0 1px #fff, -1100px 80px 0 1px #fff;
+    box-shadow: -150px 50px 0 2px #F4D03F, -900px 50px 0 2px #F4D03F, -670px 80px 0 1px #F4D03F, -1100px 80px 0 1px #F4D03F;
     animation: sky 20s linear infinite;
     animation-fill-mode: forwards;
 }
