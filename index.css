@@ -73,16 +73,16 @@
     50%,55% {background-color:#02192b;}
 }
 @keyframes base {
-    0%,45%,70%,100% {border-bottom:250px solid #455963;}
-    50%,55% {border-bottom:250px solid #0e1315;}
+    0%,45%,70%,100% {border-bottom:150px solid #455963;}
+    50%,55% {border-bottom:150px solid #0e1315;}
 }
 @keyframes peak {
-    0%,45%,70%,100% {border-bottom:60px solid #adbec6;}
-    50%,55% {border-bottom:60px solid #455963;}
+    0%,45%,70%,100% {border-bottom:50px solid #adbec6;}
+    50%,55% {border-bottom:50px solid #455963;}
 }
 @keyframes caps {
-    0%,45%,70%,100% {border-top: 15px solid #adbec6;}
-    50%,55% {border-top: 15px solid #455963;}
+    0%,45%,70%,100% {border-top: 10px solid #adbec6;}
+    50%,55% {border-top: 10px solid #455963;}
 }
 @keyframes sky {
     0%,45%,67%,100% {
@@ -257,11 +257,11 @@ body
 .peak {
     position:absolute;
     width:0;
-    border-left:60px solid transparent;
-    border-right:60px solid transparent;
+    border-left:84px solid transparent;
+    border-right:84px solid transparent;
     border-bottom:100px solid #adbec6;
     top :100px;
-    left:190px;
+    left:166px;
     z-index:5;
     animation:peak 20s linear;
     animation-fill-mode:forwards;
@@ -281,11 +281,11 @@ body
 }
 .cap-1,.cap-2,.cap-3 {
     position:absolute;
-    top:159px;
-    left: 190px;
+    top:149px;
+    left: 173px;
     border-top: 15px solid #adbec6;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
     z-index:2;
     animation: caps 20s linear;
     animation-fill-mode:forwards;
@@ -294,13 +294,13 @@ body
 
 .cap-2 {
 
-    top:159px;
+
     left: 230px;
 }
 .cap-3 {
 
-    top:159px;
-    left: 270px;
+
+    left: 280px;
 
 }
 .stars {
@@ -324,7 +324,7 @@ body
 .ground {
     background-color: #87D37C;
     width: 3000px;
-    height: 250px;
+    height: 358px;
     border-radius: 80%;
     position: fixed;
     bottom: -70px;
