@@ -374,11 +374,11 @@ body
 .pond {
     z-index: 2;
     position: fixed;
-    bottom: 17px;
+    bottom: -28px;
     left: -192px;
     background-color: #5fb2f6;
-    width: 650px;
-    height: 140px;
+    width: 755px;
+    height: 190px;
     border-radius: 50%;
     border: 3px solid #f1f1f1;
     animation: bg_color 20s linear infinite;
@@ -495,31 +495,32 @@ body
     background-color: #96281B;
 }
 .fish {
-    position: relative;
-    top: 35px;
-    left: 125px;
+    width:90px;
+    height:90px;
+    position:relative;
+    right:-250px;
+    top:20px;
 }
 .fish-body {
     position:absolute;
-    left:30px;
-    background-color: #D35400;
-    border-radius:50%;
-    width:11%;
-    height:30px;
+    left:10px;
+    border-left : 40px solid #F5AB35;
+    border-top:30px solid transparent;
+    border-bottom:30px solid transparent;
+    z-index: 2;
 }
-.wing {
+.tail {
     position:absolute;
-    left:18px;
-    background-color: #F89406;
-    border-radius:45%;
-    width:4.5%;
-    height:15px;
-    transform:rotate(30deg);
+    left: 4px;
+    top:13px;
+    border-left : 15px solid #EB9532;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
 }
 .eye {
     position:absolute;
-    top:7px;
-    left:55px;
+    top:-9px;
+    left:-20px;
     z-index:2;
     border-radius:100%;
     width:6px;
